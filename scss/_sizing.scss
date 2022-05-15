@@ -1,0 +1,57 @@
+//Variables de tamaños
+
+//Font Sizing
+$fullScreen:1000%;
+$mdScreen:500%;
+$qtScreen:250%;
+
+//Display Sizing
+$display1:1000px;
+$display2:800px;
+$display3:500px;
+$display4:300px;
+$display5:150px;
+$display6:50px;
+$display7:25px;
+$display8:15px;
+
+//Mixin de tamaños
+//MIXINS
+
+//Cards
+@mixin box {
+    height: 100%;
+    width:100%;
+    border: solid 2px $portbrown;
+    border-radius: 10px;  
+}
+
+//25x25
+@mixin qtbox {
+    height: 25%;
+    width:25%;
+    border: solid 2px $portbrown;
+    border-radius: 10px;  
+}
+
+//50x50
+@mixin mdbox {
+    height: 50%;
+    width: 50%;
+    border: solid 2px $portbrown;
+    border-radius: 10px;
+}
+
+//75x75
+@mixin sfbox {
+    height: 75%;
+    width: 75%;
+    border: solid 2px $portbrown;
+    border-radius: 10px;
+}
+
+//Mixin de tamaños de ancho y alto.
+@mixin size ($ancho, $alto){
+width: $ancho;
+height: $alto;
+}

@@ -1,0 +1,10 @@
+/*Aplicando CSS desde 0 utilizando SASS*/
+//asi vamos a hacer comentarios de lineas en SASS.
+
+//Aca importamos todos los SASS, para trabajar el sitio por separado.
+@import "sizing";
+@import "colors";
+@import "body";
+@import "imgformat";
+@import "tipography";
+@import "media";

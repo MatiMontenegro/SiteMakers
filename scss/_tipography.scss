@@ -1,0 +1,276 @@
+//MIXIN DE TIPOGRAFIAS
+@mixin text ($align, $tamanio, $color){
+    font-family:'baloo 2','josefin sans', 'roboto', 'nunito', 'ubuntu' , sans-serif;
+                text-align: $align;
+                font-size: $tamanio;
+                margin: 0%;
+                padding: 1%;
+                color: $color; 
+}
+
+/**********************************************************************************
+*****************************Trabajando en tipography.scss*************************
+**********************************************************************************/
+.title{
+    font-family: 'koulen', 'josefin sans', 'roboto', 'nunito', 'ubuntu' , sans-serif;
+    font-size: $fullScreen;
+    text-align: center;
+    padding: 0%;
+    color: $portblack;
+    }
+    .slogan{
+        font-family:'josefin sans', 'roboto', 'nunito', 'ubuntu' , sans-serif;
+        padding:1%;
+        text-transform:uppercase;
+        color: $portwhite;
+        background-color: $portgrey;
+        font-size: $qtScreen + 15%;
+        text-align: center; 
+    }
+
+.links a{
+    opacity: 1;
+    font-family: 'lora', 'battambang','baloo 2','roboto', 'nunito', 'ubuntu', 'josefin sans', sans-serif;
+    font-weight: 600;
+    width: 25%;
+    margin: 0.5%;
+    padding: 0.5%;
+    text-decoration: none;
+    text-align: center;
+    color: $portwhite;
+    background-color: $portbrown;
+    border: solid 2px $portgrey;
+    border-radius: 50px;
+        &:hover{
+            font-size: larger;
+            color:$portwhite;
+            background-color: $portbrownie;
+            box-shadow: 15px 15px 15px $portblack;
+            transition-duration: .5s;
+        }
+}
+footer{
+
+    .rights{
+        grid-column: 1/2;
+        grid-row: 1;
+        font-family:'baloo 2', 'ubuntu','roboto', 'josefin sans','nunito', sans-serif ;
+        margin-top: 10%;
+        margin-left: 15%;
+        text-align: left;
+        color: $portbrownie;
+        text-emphasis-color: $portbrownie;
+        font-weight: 900;
+        font-size: $display7;
+    }
+
+            .redes{
+            grid-column: 2/3;
+            grid-row: 1;
+            justify-items: flex-start;
+            align-items: flex-start;
+            font-family:'baloo 2', 'roboto', 'nunito','josefin sans', 'ubuntu';
+            color: $portwhite;
+               p{
+                a{
+                font-weight: 900;
+                color: $portbrownie;
+                text-decoration: none;
+                 } 
+               }   
+            } 
+    
+    }
+
+/*************************************************Inicio de Index.html********************************************/
+
+
+/*Titulo principal y descripcion en index.html*/
+.index-p{
+        h2{
+            @include text(left,$display6 ,$portblack )
+        }
+        p{
+        font-family:'baloo 2','josefin sans', 'roboto', 'nunito', 'ubuntu' , sans-serif;
+        text-align: start;
+        font-size: $display7;
+        margin: 0%;
+        padding: 1%;
+        color: $portbrown;
+        }
+    }
+
+/*Titulo de cyberseguridad*/
+.cybersec{
+    h3{
+        font-family: 'lora', sans-serif;
+        font-size: $display6;
+        font-weight: 800;
+        text-align: left;
+        transform: translateY(60px);
+        margin-left: 1%;
+        padding: 0;
+        color: $portwhite;
+    }
+    
+}
+
+/*Contenido descriptivo sobre Cyberseguridad*/
+.cybersecinfo{
+    p{
+        font-family: 'baloo 2', sans-serif;
+        font-size: $display7;
+        margin-left: 1%;
+        margin-bottom:0%;
+        color: $portwhite;
+}
+}
+
+    /******************************************************Inicio US.html**************************************************/
+ 
+ /*Titulo y descripcion acerca de nuestro compromiso*/
+    .compromiso{
+
+        h4{
+            @include text(left, $mdScreen + 5% , $portblack);
+            ;
+            margin:0%;
+            margin-left: 2%;
+            padding:0%;
+        }
+        p{  
+            @include text(left, $display8, $portblack);
+            ;
+            margin:0%;
+            margin-left: 3%;
+            padding:0%;
+        }
+    }
+  /*Texto descriptivo para las cards de las grillas*/  
+    .grilla{
+            .one{
+                display:flex;
+                align-items : center;
+                justify-content : center;
+                @include text (center, $display7, $portblack);               
+            }
+            .two{
+                display:flex;
+                align-items : center;
+                justify-content : center;
+                @include text (center, $display7, $portwhite);
+
+            }
+            .three{
+                display:flex;
+                align-items : center;
+                justify-content : center;
+                @include text (center, $display7, $portwhite);
+            }
+            .pgo{
+                display:flex;
+                align-items : center;
+                justify-content : center;
+                @include text (center, $display7, $portblack);
+            }
+            .pgt{
+                display:flex;
+                align-items : center;
+                justify-content : center;
+                @include text (center, $display7, $portwhite);
+            }
+            .pgth{
+                display:flex;
+                align-items : center;
+                justify-content : center;
+                @include text (center, $display7, $portwhite);
+            }
+            .imgt{
+                @include text (center, $display7, $portgrey);
+            }
+        }
+
+        /*****************************************************Inicio portfolio.html*****************************************/
+        
+        /*Propiedades del titulo del sitio y parrafos*/
+        .sitios{
+            h3{
+                @include text(left,$display6 ,$portgrey );
+                margin-left:1%;
+            }
+            p{
+                @include text(left,$display7 ,$portgrey );
+                margin-left:1%;
+            }
+        }
+        
+        
+        /*Propiedades de texto del panel, puse todo junto parrafo y todo en h3*/
+        .panel{
+            h3{
+            @include text (left, $display7, $portblack);
+            position: absolute;
+            background-color: $portwhite;
+            bottom: 0px;
+            left: 0px;
+            opacity:0;
+        }
+    }
+        /****************************************************Inicio de Services.html*********************************/
+
+        /*Formato de texto de Servicios y breve descripcion*/
+        .services{
+            h2{
+            @include text(left,$qtScreen,$portgrey);
+            margin-left: 2%;
+            }
+            p{
+            @extend h2;
+            font-size: $display7;
+            }
+        }
+
+        /*Formato de texto de la grilla con 3 cards de servicios que ofrecemos*/
+        .servgrid{
+            .boxy1{
+                h3{
+                @include text(left,$display7 ,$portbrown);
+                background:transparentize($color: $portwhite, $amount: .2);
+                }
+                p{
+                    @include text(left,$display8 ,$portbrown);
+                    background:transparentize($color: $portwhite, $amount: .2);
+                    a{
+                    text-decoration: none;
+                    }
+                }
+        }
+            .boxy2{
+                @extend .boxy1;
+            }
+            .boxy3{
+                @extend .boxy1;
+            }
+        }
+
+        /*Formato de texto de introduccion a la galeria*/
+        .galeria-title{
+            h4{
+            @include text(right,$qtScreen,$portgrey);
+            margin-right: 2%;
+            }
+            p{
+            @extend h4;
+            font-size: $display7;
+            }
+        }
+
+
+        /****************************************************Inicio de Contacto.html**********************************/
+        /*Formato del boton de enviar o cancelar*/
+        button, input {
+            font-family: 'baloo', sans-serif;
+            font-weight: 50%;
+            letter-spacing: 1.4px;
+          }
+     

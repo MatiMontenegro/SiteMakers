@@ -1,0 +1,405 @@
+//Aca vamos a estar trabajando todo lo relacionado con las propiedades de las cajas contenedoras, grillas, bodys, etc
+
+/****************************************************************************
+***************************Trabajando Body.scss******************************
+****************************************************************************/
+
+/*Browser Reseteo*/
+
+*{
+    box-sizing: none;
+    margin: 0;
+    padding: 0;
+}
+body{
+  cursor: url('../img/pointer/pointer-svgrepo-com.svg');
+}
+
+/*Agregamos Animacion para el sitio*/
+@keyframes wow { 
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+/*Propiedades de todos los body*/
+body{
+    animation: wow 5s;
+    background-color: $portwhite;
+    width: 100%;
+    height: 100vh;
+   
+}
+/*Propiedades de header*/
+header{
+  margin: 0;
+  padding: 0;
+}
+    /*Propiedades de los links*/
+    .links{
+      width: 100%;
+      margin: 2% 0% 2% 0%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+    }
+
+/*Propiedades del Footer*/
+footer{
+  section{
+display: grid;
+grid-template-columns: repeat (2, 1fr);
+grid-template-rows: 1;
+background-color: $portblack;
+}
+}
+
+
+/******************************************************Index.html***************************************************/
+
+/*Propiedades de la caja de parrafos de Index*/
+.index-p{
+    background-color: $portwhite;
+}
+
+/*Propiedades de la seccion CyberSeguridad*/
+.cybersec{
+  margin-top: 0px;
+  width: 100%;
+}
+/*Propiedades de caja contenedora Cybersecinfo*/
+.cybersecinfo{
+  width: 100%;
+  background-color: $portbrown;
+}
+/*Propiedades de Carousel Bootstrap*/
+#carouselExampleSlidesOnly{
+  height: 100%;
+  transform: scale(0.5);
+}
+
+/*****************************************************Fin de Index.html************************************************/
+
+/*****************************************************Inicio Us.html***************************************************/
+
+/*Caja contenedora compromiso*/
+.compromiso{
+  display: flex;
+  flex-flow: column wrap;
+  @include size (100%, 25vh);
+}
+
+/*Caja contenedora de la grilla*/
+  .grilla{
+  width: 100%;
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  grid-gap: 0px;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "title texto img"
+                      "title texto img"
+                      "title texto img";
+  grid-gap: 0px;
+        .one{
+          opacity:1;
+          background-color: $portwhite;
+          grid-area: title;
+          grid-row: 1/1;
+        }
+        .two{
+          opacity:1;
+          background-color: $portbrown;
+          grid-area: title;
+          grid-row: 2/2;
+        }
+        .three{
+          opacity:1;
+          background-color: $portgrey;
+          grid-area: title;
+          grid-row: 3/3;
+        }
+        .pgo{
+          opacity:1;
+          background-color: $portwhite;
+          grid-area: texto;
+          grid-row: 1/1;
+        }
+        .pgt{
+          opacity:1;
+          background-color: $portbrown;
+          grid-area: texto;
+          grid-row: 2/2;
+        }
+        .pgth{
+          opacity:1;
+          background-color: $portgrey;
+          grid-area: texto;
+          grid-row: 3/3;
+        }
+        .imgo{
+          opacity:1;
+          background-color: $portwhite;
+          grid-area: img;
+          grid-row:1;
+        }
+        .imgt{
+          opacity:1;
+          height: 100%;
+          background-color: $portbrown;
+          grid-area: img;
+          grid-row:2;
+        }
+        .imgth{
+          opacity:1;
+          background-color: $portgrey;
+          grid-area: img;
+          grid-row:3;
+        }
+  }
+  /*****************************************************Fin de Us.html***************************************************/
+
+  /******************************************************Inicio de portfolio.html****************************************/
+
+  /*Propiedades de Titulo y Comentarios*/
+
+
+  /*Propiedades de las cards de muestras de sitios - Lion Xpress claramente no la hice yo, pero necesitaba mas cartas, las demas si, se nota.*/
+  .cards{
+    display:flex;
+    width: 90vw;
+    margin:0;
+    margin-left:5%;
+  }
+
+  /*Propiedades de las cartas o paneles con los sitios*/
+  .panel{
+    cursor:pointer;
+    background-size: auto 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 20px;
+    flex: 0.5;
+    margin: 15px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    opacity:0.5;
+  }
+  .panel.active{
+    flex: 5;
+    opacity: 1;
+  }
+  .panel.active h3{
+    width:100%;
+    opacity:1;
+    transition: opacity 0.3s ease-in 0.4s;
+  }
+/*Fin de las propiedades de las cartas*/
+/****************************************************Inicio de Servicios.html**********************************************************/
+
+/*Propiedades de primer grilla*/
+.servgrid{
+  display:grid;
+  justify-items: center;
+  margin-top:10%;
+  margin-bottom: 15%;
+  margin-left: 4vw;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5%;
+  width: 90%;
+  height: 100%;
+}
+
+/*Propiedades de Segunda Grilla*/
+.griddy{
+  display:grid;
+  justify-items: center;
+  margin-top:10%;
+  margin-bottom: 10%;
+  margin-left: 4vw;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5%;
+  width: 90%;
+  height: 100%;
+}
+
+
+/****************************************************Inicio Contacto.html**************************************************************/
+
+/*Propiedades de contacto Aca cambiamos el fondo de color*/
+.cuerpo{
+  background-color: $portgrey;
+}
+
+.background {
+  display: flex;
+  min-height: 100vh;
+}
+
+.contacto {
+  flex: 0 1 700px;
+  margin: auto;
+  padding: 10px;
+  margin: 10%;
+}
+/*Propiedades de la windows*/
+.screen {
+  position: relative;
+  background: #3e3e3e;
+  border-radius: 15px;
+}
+
+.screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+/*Propiedades del encabezado*/
+.screen-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #4d4d4f;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.screen-header-left {
+  margin-right: auto;
+}
+
+.screen-header-button {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  border-radius: 8px;
+  background: white;
+}
+/*Botones tipo Mac*/
+.screen-header-button.close {
+  background: #ed1c6f;
+}
+
+.screen-header-button.maximize {
+  background: #e8e925;
+}
+
+.screen-header-button.minimize {
+  background: #74c54f;
+}
+
+.screen-header-right {
+  display: flex;
+}
+
+.screen-header-ellipsis {
+  width: 3px;
+  height: 3px;
+  margin-left: 2px;
+  border-radius: 8px;
+  background: #999;
+}
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: $portbrown;
+  font-size: 26px;
+}
+
+.app-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 25px;
+  height: 4px;
+  background: $portgrey;
+}
+/*Propiedades del formulario*/
+.app-contact {
+  margin-top: auto;
+  font-size: 8px;
+  color: #888;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.message {
+  margin-top: 40px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #ddd;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+  color: #666;
+}
+
+.app-form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.app-form-button {
+  background: none;
+  border: none;
+  color: $portblack;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.app-form-button:hover {
+  color: $portbrownie;
+}
+
+
