@@ -14,7 +14,10 @@ function removeActiveClasses(){
         panel.classList.remove('active')
     })
 }
+codex/find-and-fix-important-codebase-bug
+
 
 if (typeof module !== 'undefined') {
     module.exports = { removeActiveClasses }
 }
+main
