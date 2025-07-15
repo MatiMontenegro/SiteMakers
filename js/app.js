@@ -14,3 +14,7 @@ function removeActiveClasses(){
         panel.classList.remove('active')
     })
 }
+
+if (typeof module !== 'undefined') {
+    module.exports = { removeActiveClasses }
+}
